@@ -1,0 +1,154 @@
+WEB APPLICATION BASICS
+======================
+
+1. What is a web application?
+------------------------------
+A web application is software that users access through a web browser.
+Examples: Gmail, an online banking system, an e-commerce site, and a student portal.
+
+A web application usually has three major parts:
+
+                Browser (frontend)  <---- HTTP request/response ---->  Server (backend)
+                                                                                                                                                                                                                                         |
+                                                                                                                                                                                                                                Database
+
+
+2. Static and dynamic web pages
+-------------------------------
+
+Static web page:
+- The content is mostly fixed for every visitor.
+- It can be created with HTML and CSS.
+- Example: a simple personal profile page.
+
+Dynamic web application:
+- The content or behavior can change based on user actions, data, time, or login status.
+- It commonly uses HTML, CSS, JavaScript, a backend, and a database.
+- Example: a shopping cart that updates when a product is added.
+
+Important: JavaScript can make a page interactive in the browser. A backend is
+needed when the application must securely process data or store/retrieve shared data.
+
+
+3. Frontend, backend, and database
+-----------------------------------
+
+Frontend (client side):
+- Runs in the user's browser.
+- Displays the user interface and handles user interaction.
+- Main technologies: HTML, CSS, and JavaScript.
+
+Backend (server side):
+- Runs on a server.
+- Applies business rules, validates data, authenticates users, and communicates with databases.
+- Java examples: Java Servlets, Spring, and Spring Boot.
+
+Database:
+- Stores application data for later use.
+- Examples: MySQL, PostgreSQL, MongoDB, and Oracle Database.
+
+5. HTML, CSS, and JavaScript
+-----------------------------
+HTML (HyperText Markup Language):
+- Defines the structure and meaning of a page.
+- Examples: headings, paragraphs, forms, buttons, and links.
+
+CSS (Cascading Style Sheets):
+- Controls presentation and layout.
+- Examples: colors, fonts, spacing, borders, and responsive layouts.
+
+JavaScript:
+- Adds behavior and interaction.
+- Examples: validating a form, opening a menu, and fetching data without reloading.
+
+Simple example:
+                <button id="helloButton">Say hello</button>
+                <script>
+                        document.querySelector('#helloButton').onclick = function () {
+                                alert('Hello!');
+                        };                      
+                </script>
+
+
+6. Important web terms
+-----------------------
+Browser: A program such as Chrome, Edge, or Firefox used to access web applications.
+URL: The address of a resource on the web.
+HTTP: The communication protocol used between browsers and servers.
+HTTPS: The encrypted version of HTTP.
+Client: The browser or application making a request.
+Server: A computer or program that receives requests and sends responses.
+API: A set of rules that allows applications to communicate.
+JSON: A common text format for sending structured data.
+Framework: A collection of reusable tools and rules, such as Spring Boot or React.
+
+
+7. HTTP methods and status codes
+--------------------------------
+Common HTTP methods:
+- GET: Read data.
+- POST: Create or submit data.
+- PUT/PATCH: Update data.
+- DELETE: Remove data.
+
+Common status codes:
+- 200 OK: Request succeeded.
+- 201 Created: A resource was created.
+- 400 Bad Request: The request data is invalid.
+- 401 Unauthorized: Login is required or invalid.
+- 403 Forbidden: The user is not allowed to perform the action.
+- 404 Not Found: The requested resource does not exist.
+- 500 Internal Server Error: The server encountered an error.
+
+
+8. Forms and validation
+-----------------------
+Forms collect input such as names, email addresses, and passwords.
+
+Client-side validation gives quick feedback to the user, but it is not enough
+for security. The backend must validate all important input again before using it.
+
+
+9. Authentication and authorization
+------------------------------------
+Authentication answers: "Who is the user?"
+Example: logging in with an email and password.
+
+Authorization answers: "What is the user allowed to do?"
+Example: an administrator can delete users, while a normal user cannot.
+
+Never store plain-text passwords. Use a secure password-hashing method and use
+HTTPS when sending sensitive information.
+
+
+10. A useful Java full-stack learning order
+--------------------------------------------
+1. HTML: page structure, links, images, tables, and forms.
+2. CSS: selectors, box model, Flexbox, Grid, and responsive design.
+3. JavaScript: variables, functions, arrays, objects, DOM, events, and fetch.
+4. HTTP and REST APIs: requests, responses, JSON, methods, and status codes.
+5. Core Java: OOP, collections, exceptions, files, and basic testing.
+6. SQL: tables, keys, SELECT, INSERT, UPDATE, DELETE, and joins.
+7. Spring Boot: controllers, services, repositories, and validation.
+8. Database integration: connect the backend to MySQL or PostgreSQL.
+9. Security: authentication, authorization, password hashing, and HTTPS.
+10. Deployment: package the application and run it on a server or cloud platform.
+
+
+11. Beginner practice projects
+-------------------------------
+- Personal profile page: HTML and CSS.
+- To-do list: HTML, CSS, and JavaScript.
+- Student registration form: frontend validation and a Java backend.
+- Notes API: Spring Boot, REST, and a database.
+- Login application: authentication, authorization, and protected pages.
+
+
+12. Quick revision questions
+-----------------------------
+1. What is the difference between a static page and a dynamic application?
+2. What are the responsibilities of the frontend and backend?
+3. What happens after a browser sends an HTTP request?
+4. When would you use GET, POST, PUT, and DELETE?
+5. Why must backend validation be performed even when frontend validation exists?
+6. What is the difference between authentication and authorization?

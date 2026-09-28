@@ -1,0 +1,526 @@
+HTML COMPLETE BEGINNER NOTES
+============================
+
+1. What is HTML?
+-----------------
+HTML means HyperText Markup Language.
+
+HTML is the standard markup language used to create the structure of web pages.
+It tells the browser what each piece of content means, such as a heading,
+paragraph, image, link, list, table, or form.
+
+HTML is not a programming language because it does not perform calculations,
+make decisions, or repeat instructions by itself. It is a markup language.
+
+HTML provides structure, CSS provides appearance, and JavaScript provides
+behavior:
+
+    HTML       -> structure and meaning
+    CSS        -> design and layout
+    JavaScript -> interaction and dynamic behavior
+
+
+2. HTML elements, tags, and attributes
+---------------------------------------
+An element usually has an opening tag, content, and a closing tag:
+
+    <p>This is a paragraph.</p>
+
+In this example:
+- <p> is the opening tag.
+- The text is the content.
+- </p> is the closing tag.
+- The complete opening tag, content, and closing tag form an element.
+
+Some elements do not need closing tags. They are called void elements:
+
+    <img src="photo.jpg" alt="A mountain">
+    <br>
+    <input type="text">
+
+Attributes provide additional information about an element:
+
+    <a href="https://example.com" target="_blank">Visit site</a>
+
+Here, href and target are attributes. Attribute values are normally written in
+double quotation marks.
+
+Important rules:
+- Write tags in lowercase.
+- Close normal elements correctly.
+- Nest elements in the correct order.
+- Quote attribute values.
+- Use indentation to make nested content easy to read.
+
+Correct nesting:
+    <p>This is <strong>important</strong> text.</p>
+
+Incorrect nesting:
+    <p>This is <strong>important</p></strong>
+
+
+3. Basic HTML document structure
+---------------------------------
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="A beginner HTML page">
+        <title>My HTML Page</title>
+    </head>
+    <body>
+        <h1>Welcome to my page</h1>
+        <p>This page is written using HTML.</p>
+    </body>
+    </html>
+
+Meaning of each part:
+- <!DOCTYPE html>: tells the browser to use modern HTML standards mode.
+- <html>: the root element containing the entire document.
+- lang="en": identifies the document language as English.
+- <head>: contains information about the page, not the main visible content.
+- <meta charset="UTF-8">: supports many written languages and symbols.
+- The viewport meta tag: helps the page scale correctly on mobile devices.
+- <meta name="description">: describes the page for search engines and previews.
+- <title>: text shown in the browser tab and used by bookmarks.
+- <body>: contains the visible page content.
+
+
+4. Comments and whitespace
+--------------------------
+Comments are notes for developers. Browsers do not display them:
+
+    <!-- This is an HTML comment. -->
+
+Spaces and line breaks are generally collapsed when HTML is displayed. Use
+CSS for visual spacing instead of adding many spaces or <br> elements.
+
+
+5. Headings and paragraphs
+--------------------------
+Headings range from <h1> to <h6>:
+
+    <h1>Web Development</h1>
+    <h2>HTML</h2>
+    <h3>Elements</h3>
+
+- <h1> is the main heading of the page or main content.
+- <h2> introduces a major section.
+- <h3> introduces a subsection inside an <h2> section.
+- <h4> through <h6> are used for deeper subsections.
+- Choose headings by meaning and hierarchy, not by their default size.
+- Do not choose a heading only to make text look large; use CSS for size.
+
+Paragraphs use the <p> element:
+
+    <p>HTML gives a document a meaningful structure.</p>
+
+Useful text elements:
+- <strong>: content has strong importance; browsers usually display it bold.
+- <em>: content has emphasis; browsers usually display it italic.
+- <mark>: highlighted or relevant text.
+- <small>: side comments or less prominent text.
+- <code>: a short piece of computer code.
+- <pre>: preserves spaces and line breaks, often for code blocks.
+- <blockquote>: a longer quotation from another source.
+- <center>: 
+
+6. Links and URLs
+------------------
+The anchor element creates a link:
+
+    <a href="about.html">About us</a>
+
+Types of links:
+
+    <a href="/contact.html">Contact</a>
+    <a href="https://developer.mozilla.org/">HTML reference</a>
+    <a href="mailto:help@example.com">Email support</a>
+    <a href="#faq">Read the FAQ</a>
+    <h2 id="faq">Frequently Asked Questions</h2>
+
+The href attribute contains the destination. Link text should describe the
+destination, such as "View course details", rather than vague text such as
+"Click here".
+
+If a link opens a new tab with target="_blank", also use:
+
+    <a href="https://example.com" target="_blank" rel="noopener noreferrer">
+        External site
+    </a>
+
+
+7. Images and media
+-------------------
+An image uses the <img> element:
+
+    <img src="images/profile.jpg" alt="A student studying at a desk">
+
+- src specifies the image location.
+- alt provides a text alternative for screen readers and when the image fails.
+- Use alt="" for purely decorative images.
+- Do not write "image of" in alt text because screen readers already identify it.
+
+Images can also have dimensions:
+
+    <img src="logo.png" alt="Company logo" width="240" height="80">
+
+Specifying dimensions can help the browser reserve space while an image loads.
+
+Other media elements:
+
+    <audio controls src="intro.mp3"></audio>
+
+    <video controls width="640">
+        <source src="lesson.mp4" type="video/mp4">
+        Your browser does not support this video.
+    </video>
+
+Use captions for videos when appropriate. The <track> element can provide
+subtitles or captions.
+
+
+8. Lists
+--------
+Unordered lists use bullet points:
+
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+
+Ordered lists use numbered items:
+
+    <ol>
+        <li>Open the browser.</li>
+        <li>Enter the URL.</li>
+        <li>Submit the form.</li>
+    </ol>
+
+Description lists represent terms and their descriptions:
+
+    <dl>
+        <dt>HTML</dt>
+        <dd>The language used to structure web content.</dd>
+    </dl>
+
+Use lists for groups of related items. Do not use repeated spaces or random
+symbols to imitate a list.
+
+
+9. Containers and grouping
+---------------------------
+<div> is a generic block-level container. Use it when no more meaningful
+semantic element is suitable.
+
+<span> is a generic inline container for a small piece of content.
+
+    <div class="product-card">
+        <h2>Notebook</h2>
+        <p>Price: <span class="price">$10</span></p>
+    </div>
+
+The class attribute can be shared by many elements. The id attribute should be
+unique within a page:
+
+    <p class="note">This style can be reused.</p>
+    <p id="main-note">This identifies one specific element.</p>
+
+Avoid using many <div> elements when semantic elements such as <article>,
+<section>, or <nav> communicate the purpose better.
+
+
+10. Semantic HTML and page layout
+----------------------------------
+Semantic elements describe the purpose of content:
+
+    <body>
+        <header>
+            <h1>Student Portal</h1>
+            <nav>
+                <a href="/home">Home</a>
+                <a href="/courses">Courses</a>
+            </nav>
+        </header>
+
+        <main>
+            <section>
+                <h2>Announcements</h2>
+                <article>
+                    <h3>New course available</h3>
+                    <p>Registration is now open.</p>
+                </article>
+            </section>
+            <aside>Useful related links</aside>
+        </main>
+
+        <footer>Copyright information</footer>
+    </body>
+
+Meaning of common semantic elements:
+- <header>: introductory content for a page or section.
+- <nav>: a group of important navigation links.
+- <main>: the unique primary content of the page.
+- <section>: a thematic group of content, normally with a heading.
+- <article>: independent content that could stand on its own.
+- <aside>: related content, such as a sidebar or related links.
+- <footer>: closing information for a page or section.
+- <figure> and <figcaption>: media and its caption.
+
+Semantic HTML improves accessibility, search-engine understanding, and code
+maintenance. Normally use one <main> element per page.
+
+
+11. Forms
+---------
+Forms collect and submit user input:
+
+    <form action="/register" method="post">
+        <label for="fullName">Full name</label>
+        <input id="fullName" name="fullName" type="text" required>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required>
+
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" minlength="8" required>
+
+        <button type="submit">Create account</button>
+    </form>
+
+Important form concepts:
+- <form>: groups controls and defines where data is submitted.
+- action: the URL that receives the submitted data.
+- method: how the browser sends the data, commonly GET or POST.
+- <label>: describes a control and improves keyboard and screen-reader use.
+- for on a label must match the control's id.
+- name: the key used when the control's value is submitted.
+- value: the submitted value for some controls.
+- required: prevents submission when a value is missing in the browser.
+- placeholder: a hint, not a replacement for a label.
+- disabled: prevents interaction and submission.
+- readonly: prevents editing but may still submit the value.
+
+Common input types:
+- text: short text.
+- email: an email address with browser checks.
+- password: hidden password input.
+- number: numeric input.
+- date: a date picker in supported browsers.
+- checkbox: zero or more independent choices.
+- radio: one choice from a group sharing the same name.
+- file: file selection from the user's device.
+- submit: submits the form, although a <button> is usually more flexible.
+
+Textarea and select controls:
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="5"></textarea>
+
+    <label for="course">Course</label>
+    <select id="course" name="course">
+        <option value="java">Java</option>
+        <option value="html">HTML</option>
+    </select>
+
+Use <fieldset> and <legend> to group related controls, especially radio
+buttons and checkboxes.
+
+
+12. GET and POST in forms
+--------------------------
+GET is generally used to request or search for data:
+
+    <form action="/search" method="get">
+        <input name="query" type="search">
+        <button type="submit">Search</button>
+    </form>
+
+The search value may appear in the URL, such as /search?query=html.
+
+POST is generally used to submit data that creates or changes something:
+
+    <form action="/profile" method="post">
+        <input name="displayName" type="text">
+        <button type="submit">Save</button>
+    </form>
+
+POST does not make sensitive data automatically secure. Use HTTPS, validate
+data on the server, and never put secrets in HTML or URLs.
+
+
+13. Tables
+----------
+Use tables for genuine tabular data, not for page layout:
+
+    <table>
+        <caption>Course results</caption>
+        <thead>
+            <tr>
+                <th scope="col">Student</th>
+                <th scope="col">Score</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ana</td>
+                <td>92</td>
+            </tr>
+        </tbody>
+    </table>
+
+- <table>: the complete table.
+- <caption>: a title describing the table.
+- <thead>: header rows.
+- <tbody>: main data rows.
+- <tfoot>: summary or footer rows.
+- <tr>: a table row.
+- <th>: a heading cell.
+- <td>: a data cell.
+- scope="col" or scope="row": identifies what a heading describes.
+
+
+14. Connecting HTML to CSS and JavaScript
+------------------------------------------
+Link an external CSS file inside <head>:
+
+    <link rel="stylesheet" href="styles.css">
+
+Load an external JavaScript file, usually with defer:
+
+    <script src="app.js" defer></script>
+
+The defer attribute allows the HTML to be parsed before the script runs.
+Keeping structure, styling, and behavior in separate files makes projects
+easier to maintain.
+
+
+15. Accessibility essentials
+----------------------------
+Accessibility means making a web page usable by people with different
+abilities, devices, and input methods.
+
+Good practices:
+- Use semantic HTML before adding ARIA attributes.
+- Give every meaningful image useful alt text.
+- Give every form control a visible, connected label.
+- Use headings in a logical order.
+- Use <button> for actions and <a> for navigation.
+- Make sure all controls work with a keyboard.
+- Keep keyboard focus visible.
+- Use sufficient color contrast.
+- Do not communicate important information by color alone.
+- Provide captions or transcripts for relevant audio and video.
+- Use lang on the <html> element.
+
+ARIA can help when a custom interface has no suitable native HTML element, but
+incorrect ARIA can make accessibility worse. Prefer native elements first.
+
+
+16. HTML validation, security, and quality
+-------------------------------------------
+Browser validation improves user experience, but it is not a security system.
+Users can disable it or send requests without using your page. The backend must
+validate and sanitize all submitted data.
+
+Important rules:
+- Never trust data from the browser.
+- Do not put passwords, API keys, or other secrets in HTML.
+- Use HTTPS for sensitive data.
+- Escape or safely handle user-provided content to reduce injection risks.
+- Use valid URLs and clear form actions.
+- Validate markup with an HTML validator.
+- Test pages at different screen sizes.
+- Test keyboard navigation and, where possible, a screen reader.
+
+
+17. Useful HTML global attributes
+---------------------------------
+These attributes can be used on many elements:
+- id: unique identifier for an element.
+- class: reusable grouping name for CSS or JavaScript.
+- title: optional additional advisory information; do not rely on it for essential content.
+- lang: language of an element or document.
+- hidden: indicates that content is not currently relevant or visible.
+- data-*: custom data intended for scripts.
+- tabindex: controls keyboard focus order; avoid positive values unless there is a strong reason.
+
+Example:
+    <button class="save-button" data-record-id="42">Save</button>
+
+
+18. Complete small page example
+--------------------------------
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Student Profile</title>
+    </head>
+    <body>
+        <header>
+            <h1>Student Profile</h1>
+            <nav aria-label="Main navigation">
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <main>
+            <section id="about">
+                <h2>About</h2>
+                <img src="student.jpg" alt="Student reading a book">
+                <p>I am learning HTML and web application development.</p>
+            </section>
+
+            <section id="contact">
+                <h2>Contact</h2>
+                <form action="/contact" method="post">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" required>
+                    <button type="submit">Send message</button>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <p>Student Profile</p>
+        </footer>
+    </body>
+    </html>
+
+
+19. Beginner HTML practice plan
+--------------------------------
+Practice 1: Create a personal profile page with headings, paragraphs, an image,
+links, and a list.
+
+Practice 2: Create a student registration form with labels, text inputs, email,
+password, date, radio buttons, checkboxes, and a select menu.
+
+Practice 3: Create a course-results table with a caption, headings, and data.
+
+Practice 4: Create a semantic blog page using header, nav, main, article,
+section, aside, and footer.
+
+Practice 5: Add CSS, then add JavaScript form behavior without changing the
+meaningful HTML structure.
+
+
+20. Quick revision questions
+-----------------------------
+1. What is the difference between an HTML tag and an HTML element?
+2. What is the purpose of <!DOCTYPE html>?
+3. What is the difference between the head and body sections?
+4. Why is the alt attribute important for images?
+5. When should you use a link and when should you use a button?
+6. What is the difference between class and id?
+7. Why should tables not be used for page layout?
+8. What is semantic HTML, and why is it useful?
+9. Why does every form control need a label?
+10. What is the difference between GET and POST?
+11. Why must the server validate form data again?
+12. What is the role of HTML, CSS, and JavaScript in a web application?

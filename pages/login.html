@@ -3,9 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login | Aizen's Mart</title>
+    <link rel="stylesheet" href="../styles/index.css">
 </head>
-<body>
-    
+<body class="page-body login-page">
+    <header>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0VKKPlkW04LAbmntahs-g4L092vBHT_3jy3TCsoRua5EL8pWtHdTZK_8&s=10" alt="Aizen's Mart logo">
+        <nav aria-label="Main navigation">
+            <ol>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./products.html">Products</a></li>
+                <li><a href="./Cart.html">Cart</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./Contacts.html">Contact</a></li>
+                <li><a href="./login.html" aria-current="page">Login</a></li>
+            </ol>
+        </nav>
+    </header>
+
+    <main class="page-main login-main">
+        <form class="login-card" action="#" method="post">
+            <p class="eyebrow">Aizen's Mart account</p>
+            <h1>Welcome back</h1>
+            <p class="form-intro">Sign in to continue shopping your favorite anime merchandise.</p>
+            <div class="form-field">
+                <label for="email">Email address</label>
+                <input id="email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="form-field">
+                <label for="password">Password</label>
+                <input id="password" name="password" type="password" autocomplete="current-password" required>
+            </div>
+            <button class="primary-action" type="submit">Sign in</button>
+            <p class="form-note">New here? <a href="./about.html">Learn more about us</a>.</p>
+        </form>
+    </main>
+
+    <footer>
+        <p>Aizen's Mart | Made for anime fans</p>
+    </footer>
 </body>
 </html>
